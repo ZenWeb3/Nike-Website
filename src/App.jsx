@@ -1,8 +1,8 @@
 import {Navbar, Hero, PopularProducts, Services, SpecialOffer, CustomerReviews,
-        SuperQuality, Subscribe, Footer} from './Components'
+        SuperQuality, Subscribe, Footer} from './Sections'
 
 const App = () =>(
-  <main className='relative'>
+  <main className='relative overflow-hidden'>
     <Navbar/>
   <section className='xl:padding-1 wide:padding-r padding-b'>
     <Hero/>
