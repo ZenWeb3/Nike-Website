@@ -1,10 +1,12 @@
 import { useState } from "react";
 import Button from "../Components/Button";
 import { arrowRight } from "../assets/icons";
-import { statistics } from "../Constant";
-import { bigShoe1,bigShoe2,bigShoe3 } from "../assets/images"
+import { statistics, shoes } from "../Constant";
+import { bigShoe1} from "../assets/images"
+import ShoeCard from "../Components/ShoeCard"
 
 const Hero = () => {
+  const [bigShoeImg, setBigShoeImg] = useState(bigShoe1)
   return (
     <section
       id="home"
@@ -20,8 +22,8 @@ const Hero = () => {
           Our Summer Collections
         </p>
         <h1
-          className="text-[85px] max-sm:text-72px font-palanquin
-            max-sm:leading-[82px] font-bold"
+          className="text-[90px] leading-[6.75rem] max-sm:text-[50px]  mt-10 font-palanquin
+            max-sm:leading-[50px] font-bold"
         >
           <span
             className="xl:bg-white xl:whitespace-nowrap 
@@ -30,10 +32,10 @@ const Hero = () => {
             The New Arrival
           </span>
           <br />
-          <span className="text-coral-red inline-block mt-3">Nike</span> Shoes
+          <span className="text-coral-red inline-block">Nike</span> Shoes
         </h1>
         <p
-          className="font-montserrat text-slate-gray letxt-lg
+          className="font-montserrat text-slate-gray text-lg
         leading-8 mt-6 mb-14  sm:max-w-sm"
         >
           Discover stylish Nike arrivals, quality comfort, and innovation for
@@ -69,6 +71,17 @@ const Hero = () => {
           className="w-[610px] h-[500px] object-contain
             z-10 relative"
         />
+        <div className="flex sm:gap-6 gap-4 absolute -bottom-[5%] sm:left-[10%] max-sm:px-6">
+          {shoes.map((shoe,index) => (
+            <div key={shoe}>
+             <ShoeCardindex
+              imageUrl = {shoe}
+              changeShoeBtn = {(shoe) => setBigShoeImg(shoe)}
+              bigShoeImage = {bigShoeImg}
+             />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

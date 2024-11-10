@@ -12,6 +12,11 @@
   scroll-behavior: smooth;
 }
 
+svg{
+  color: black;
+  fill: black !important;
+}
+
 @layer components {
   .max-container {
     max-width: 1440px;

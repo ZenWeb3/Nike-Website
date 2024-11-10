@@ -29,7 +29,7 @@ const Navbar = () => {
           onClick={() => setToggle((prev) => !prev)}
            />
            <div className={`${Toggle ? "flex" : "hidden"}
-                            max-h-screen absolute bg-white top-20 z-10000 min-w-full`}>
+                            max-h-screen absolute bg-white top-20 z-1000 min-w-full`}>
                   <ul className="flex flex-1 flex-col justify-center items-center">
                       {navLinks.map((nav) => (
                          <li key={nav.label}>
