@@ -23,7 +23,7 @@ const Navbar = () => {
             {navLinks.map((nav) => (
               <li key={nav.label} onClick={() => setToggle(false)}>
                 <a
-                  href={`#${nav.href}`}
+                  href={`${nav.href}`}
                   className="font-montserrat font-semibold text-lg text-slate-gray hover:text-coral-red transition duration-300"
                 >
                   {nav.label}
@@ -46,7 +46,7 @@ const Navbar = () => {
           {navLinks.map((nav) => (
             <li key={nav.label}>
               <a
-                href={`#${nav.href}`}
+                href={`${nav.href}`}
                 className="font-montserrat text-lg text-slate-gray hover:text-coral-red transition duration-300"
               >
                 {nav.label}

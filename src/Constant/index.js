@@ -54,16 +54,19 @@ export const products = [
 
 export const services = [
     {
+        id: 0,
         imgURL: truckFast,
         label: "Free shipping",
         subtext: "Enjoy seamless shopping with our complimentary shipping service."
     },
     {
+        id: 1,
         imgURL: shieldTick,
         label: "Secure Payment",
         subtext: "Experience worry-free transactions with our secure payment options."
     },
     {
+        id: 2,
         imgURL: support,
         label: "Love to help you",
         subtext: "Our dedicated team is here to assist you every step of the way."
@@ -72,12 +75,14 @@ export const services = [
 
 export const reviews = [
     {
+        id: 0,
         imgURL: customer1,
         customerName: 'Morich Brown',
         rating: 4.5,
         feedback: "The attention to detail and the quality of the product exceeded my expectations. Highly recommended!"
     },
     {
+        id:1,
         imgURL: customer2,
         customerName: 'Lota Mongeskar',
         rating: 4.5,
