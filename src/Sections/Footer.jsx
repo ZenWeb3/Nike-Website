@@ -1,3 +1,4 @@
+import { copyrightSign } from "../assets/icons";
 import { footerLogo } from "../assets/images";
 import { footerLinks, socialMedia } from "../Constant";
 const Footer = () => (
@@ -15,8 +16,10 @@ const Footer = () => (
           perfect size in store. Get Rewards
         </p>
         <div className="flex items-center gap-5 mt-8">
-          {socialMedia.map((icon) => (
-            <div className="flex justify-center items-center w-12 h-12 rounded-full bg-white">
+          {socialMedia.map((icon, index) => (
+            <div 
+              key={index}
+              className="flex justify-center items-center w-12 h-12 rounded-full bg-white">
               <img src={icon.src} alt={icon.alt} width={24} height={24} />
             </div>
           ))}
@@ -29,25 +32,33 @@ const Footer = () => (
                  <h2 className="text-white text-2xl font-montserrat leading-normal
                   mb-6">{link.title}</h2>
                  <ul>
-                    {link.links.map((link) => (
+                    {link.links.map((linka, index) => (
                       <li
-                       key={link}
+                       key={index}
                        className="text-white-400 text-base leading-normal hover:text-slate-gray cursor-pointer font-montserrat mt-2 "
                       >
-                        <a>{link.name}</a>
+                        <a>{linka.name}</a>
                       </li>
                     ))}
                  </ul>
               </div>
             ))}
       </div>
-      <div className="flex justify-between text-white-400 mt-24
+    </div>
+    <div className="flex justify-between text-white-400 mt-24
                       max-sm:flex-col max-sm:items-center"> 
               <div className="flex flex-1 justify-start items-center gap-2 font-montserrat cursor-pointer ">
-                
+                <img 
+                 src={copyrightSign} 
+                 alt="copy right sign" 
+                 width={20} 
+                 height={20}
+                 className="rounded-full m-0" 
+                 />
+                 <p>Copyright. All rights reserved.</p>
+                 <p className="font-montserrat">Terms & Conditions</p>
               </div>
       </div>
-    </div>
   </footer>
 );
 
